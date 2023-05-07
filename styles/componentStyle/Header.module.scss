@@ -1,0 +1,48 @@
+.holderLogo{
+    position: relative;
+    display: flex;
+    width: 20%;
+    cursor: pointer;
+    .logo{
+        position: absolute;
+        top: -26px;
+        left: -35px;
+        width:126px;
+        height: 52px;
+        background-image: url('../../public/images/icons/SMLOGO_WHITE_NEW.svg');
+        background-repeat: no-repeat;
+        background-position: 100% center;
+        background-size: 100%;
+    }
+    
+}
+.holderMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    background-color: '#9e9e9e';    
+}  
+
+.holderMenuForMobile{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    background-color: #fff;   
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    border-radius: 2px;
+    box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 4px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -2px;
+
+    a{
+        padding: 20px 0;
+        text-align: center;
+        color: #16171b !important;
+
+        &.active{
+            color: #f43534 !important;
+        }
+    }
+}
+

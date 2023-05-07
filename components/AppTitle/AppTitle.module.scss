@@ -1,0 +1,76 @@
+.typing_title{
+  color: #fff;
+  width: 100%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 2px; /* Adjust as needed */
+  font-size: 49px !important;
+  animation: 
+    type 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+
+    span{
+      font-size: 49px !important;
+    }
+}
+
+.typing_title_with_delay{
+  color: #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 10px solid #f43534; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 2px; /* Adjust as needed */
+  font-size: 40px !important;
+  width: 100%;
+  padding-right: 10px;
+
+  opacity: 0;
+  -webkit-animation: type2 5s steps(40, end);
+  animation: 
+      type2 3.5s steps(40, end), 
+      blink-caret .5s step-end infinite;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  span{
+    font-size: 40px !important;
+  }
+ 
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 10px solid #f43534;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+    border-right: 10px solid #f43534;
+  }
+  99.9% {
+    border-right: 10px solid #f43534;
+  }
+  100% {
+    border: none;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f43534 }
+}
